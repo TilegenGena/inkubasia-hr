@@ -1,0 +1,3 @@
+# how to run server 
+- open terminal in server folder 
+- run ' node server.js'
