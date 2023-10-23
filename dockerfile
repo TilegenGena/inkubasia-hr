@@ -1,11 +1,13 @@
 FROM node:18
 
-WORKDIR /usr/src/app
-
 # COPY package*.json ./
-COPY server /usr/src/app/
+WORKDIR /app
+COPY . .
 
-# RUN npm install
+
+WORKDIR /app/server
+RUN npm install
+RUN npm build
 
 EXPOSE 3000
 
