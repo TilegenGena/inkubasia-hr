@@ -1,13 +1,14 @@
-# how to run server 
-- open terminal in server folder 
+# run server 
+- npm run start:dev
 
 # build docker
 - docker build -t tilegena/inkubasia-hr .
-
-
 
 # install Angular 
 - install the Angular CLI,
  `npm install -g @angular/cli`
 - start new project 
  `ng new my-app` 
+
+ # run client 
+ - ng build --watch
