@@ -2,4 +2,18 @@
     <span>My Business - Admin App</span>
 </mat-toolbar>
 
-<p>[Admins page goes here]</p>
+<div class="employee">
+    <h2>Employees:</h2>
+    <table>
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  <tr *ngFor="let employee of employees">
+    <td>{{employee.id}}</td>
+    <td>{{employee.firstName}}</td>
+    <td>{{employee.lastName}}</td>
+  </tr>
+</table>
+</div>
