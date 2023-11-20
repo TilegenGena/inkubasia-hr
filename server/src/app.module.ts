@@ -11,7 +11,7 @@ console.log(__dirname);
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '../../', 'client/dist/client'),
+      rootPath: join(__dirname, '../../../../', 'client/dist/client'),
     })
   ],
   controllers: [AppController],
