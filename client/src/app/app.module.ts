@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmployeeAppModule } from './employee-app/employee-app.module';
 import { AdminAppModule } from './admin-app/admin-app.module';
 import { EmployeeService } from './employee.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EmployeeService } from './employee.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     EmployeeAppModule,
-    AdminAppModule
+    AdminAppModule,
+    HttpClientModule,
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
