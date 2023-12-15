@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from '../../../../../shared/employee.interface';
+import { Employee } from 'shared/employee.interface';
 import { EmployeeService } from 'src/app/employee.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-admin-app-root',
@@ -8,14 +9,11 @@ import { EmployeeService } from 'src/app/employee.service';
   styleUrls: ['./admin-app-root.component.scss']
 })
 export class AdminAppRootComponent implements OnInit {
-  employees: Employee[] = []
+  employees$!: Observable<Employee[]>
 
   constructor(private employeeService: EmployeeService) { }
 
   ngOnInit(): void {
-    this.getEmployees();
-  }
-  getEmployees() {
-    this.employees.push(this.employeeService.getEmployees());
+    this.employees$ = this.employeeService.getAllEmployees();
   }
 }
